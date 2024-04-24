@@ -6,12 +6,8 @@ from hxnterapiapi.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users, "user")
-# router.register(r"wanted", Wanted, "wanted")
-
 
 urlpatterns = [
     path("", include(router.urls)),
     path("login/", Users.as_view({"post": "login_user"}), name="login_user"),
-    path("api-token-auth", obtain_auth_token),
-    path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
 ]
