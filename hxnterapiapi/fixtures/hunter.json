@@ -1,0 +1,25 @@
+[
+    {
+      "model": "hxnterapiapi.hunter",
+      "pk": 1,
+      "fields": {
+        "user": 1,
+        "profile_pic": "https://example.com/hunter1.jpg",
+        "age": 32,
+        "bio": "Experienced bounty hunter with a keen eye for detail.",
+        "specialization": "Surveillance"
+      }
+    },
+    {
+      "model": "hxnterapiapi.hunter",
+      "pk": 2,
+      "fields": {
+        "user": 2,
+        "profile_pic": "https://example.com/hunter2.jpg",
+        "age": 28,
+        "bio": "Expert in high-risk capture operations.",
+        "specialization": "Capture"
+      }
+    }
+  ]
+  
