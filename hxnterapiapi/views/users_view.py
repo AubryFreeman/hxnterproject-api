@@ -1,68 +1,53 @@
-import json
-from django.http import HttpResponseServerError, HttpResponse, HttpResponseNotAllowed
-from rest_framework.viewsets import ViewSet
+from rest_framework import viewsets, status, permissions
+from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework import serializers, status
+from rest_framework import serializers
+from rest_framework.authtoken.models import Token
+
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.decorators import action
-from rest_framework.authtoken.models import Token
-from rest_framework.decorators import action
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    """JSON serializer for Users
-
-    Arguments:
-        serializers
-    """
-
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        url = serializers.HyperlinkedIdentityField(view_name="user", lookup_field="id")
-        fields = (
-            "id",
-            "url",
-            "username",
-            "first_name",
-            "last_name",
-            "email",
-            "is_active",
-            "date_joined",
-        )
+        fields = ["id", "username", "password", "email", "first_name", "last_name"]
+        extra_kwargs = {"password": {"write_only": True}}
 
 
-class Users(ViewSet):
-    """Users for Hxnter
-    Purpose: Allow a user to communicate with the Hxnter database to GET PUT POST and DELETE Users.
-    Methods: GET PUT(id) POST
-    """
+class Users(viewsets.ViewSet):
+    queryset = User.objects.all()
+    permission_classes = [permissions.AllowAny]
 
+    @action(detail=False, methods=["post"], url_path="register")
+    def register_account(self, request):
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            user = User.objects.create_user(
+                username=serializer.validated_data["username"],
+                first_name=serializer.validated_data["first_name"],
+                last_name=serializer.validated_data["last_name"],
+                email=serializer.validated_data["email"],
+                password=serializer.validated_data["password"],
+            )
+            token, created = Token.objects.get_or_create(user=user)
+            return Response({"token": token.key}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class Users(ViewSet):
-    # Other methods...
-    @csrf_exempt
-    @action(detail=False, methods=["post"])
+    @action(detail=False, methods=["post"], url_path="login")
     def login_user(self, request):
-        """Handles the authentication of a user"""
+        username = request.data.get("username")
+        password = request.data.get("password")
 
-        body = request.body.decode("utf-8")
-        req_body = json.loads(body)
+        user = authenticate(username=username, password=password)
 
-        if request.method == "POST":
-            name = req_body["username"]
-            pass_word = req_body["password"]
-            authenticated_user = authenticate(username=name, password=pass_word)
-
-            if authenticated_user is not None:
-                token, _ = Token.objects.get_or_create(user=authenticated_user)
-                data = {"valid": True, "token": token.key, "id": authenticated_user.id}
-                return Response(data, status=status.HTTP_200_OK)
-            else:
-                data = {"valid": False}
-                return Response(data, status=status.HTTP_401_UNAUTHORIZED)
-        return Response("Method Not Allowed", status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        if user:
+            token = Token.objects.get(user=user)
+            return Response({"token": token.key}, status=status.HTTP_200_OK)
+        else:
+            return Response(
+                {"error": "Invalid Credentials"}, status=status.HTTP_400_BAD_REQUEST
+            )
 
     def retrieve(self, request, pk=None):
         """Handle GET requests for single customer
