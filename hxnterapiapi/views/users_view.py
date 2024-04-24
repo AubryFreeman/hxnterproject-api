@@ -9,8 +9,6 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import action
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import action
-from rest_framework.authentication import BasicAuthentication
-from rest_framework.permissions import IsAuthenticated
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -36,47 +34,30 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class Users(ViewSet):
-    authentication_classes = [BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    """Users for Hxnter
+    Purpose: Allow a user to communicate with the Hxnter database to GET PUT POST and DELETE Users.
+    Methods: GET PUT(id) POST
+    """
 
     @action(detail=False, methods=["post"], url_path="login")
     def login_user(self, request):
-        user = request.user
-        if user.is_authenticated:
-            token, _ = Token.objects.get_or_create(user=user)
-            serializer = UserSerializer(user, context={"request": request})
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        authenticated_user = authenticate(username=username, password=password)
+
+        if authenticated_user is not None:
+            token = Token.objects.get_or_create(user=authenticated_user)[0]
+
+            serializer = UserSerializer(
+                authenticated_user, context={"request": request}
+            )
             data = {"valid": True, "token": token.key, "user": serializer.data}
             return Response(data, status=status.HTTP_200_OK)
         else:
             return Response(
-                {"error": "Invalid Credentials"}, status=status.HTTP_401_UNAUTHORIZED
+                {"error": "Invalid Credentials"}, status=status.HTTP_400_BAD_REQUEST
             )
-
-    # class Users(ViewSet):
-    #     """Users for Hxnter
-    #     Purpose: Allow a user to communicate with the Hxnter database to GET PUT POST and DELETE Users.
-    #     Methods: GET PUT(id) POST
-    #     """
-
-    #     @action(detail=False, methods=["post"], url_path="login")
-    #     def login_user(self, request):
-    #         username = request.data.get("username")
-    #         password = request.data.get("password")
-
-    #         authenticated_user = authenticate(username=username, password=password)
-
-    #         if authenticated_user is not None:
-    #             token = Token.objects.get_or_create(user=authenticated_user)[0]
-
-    #             serializer = UserSerializer(
-    #                 authenticated_user, context={"request": request}
-    #             )
-    #             data = {"valid": True, "token": token.key, "user": serializer.data}
-    #             return Response(data, status=status.HTTP_200_OK)
-    #         else:
-    #             return Response(
-    #                 {"error": "Invalid Credentials"}, status=status.HTTP_400_BAD_REQUEST
-    #             )
 
     def retrieve(self, request, pk=None):
         """Handle GET requests for single customer
