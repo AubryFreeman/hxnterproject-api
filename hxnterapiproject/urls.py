@@ -9,5 +9,6 @@ router.register(r"users", Users, "user")
 
 urlpatterns = [
     path("", include(router.urls)),
-    path("login/", Users.as_view({"post": "login_user"}), name="login_user"),
+    path("login", Users.as_view({"post": "login_user"}), name="login"),
+    path("register", Users.as_view({"post": "register_account"}), name="register"),
 ]
