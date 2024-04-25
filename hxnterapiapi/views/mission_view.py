@@ -14,22 +14,12 @@ class MissionViewSet(viewsets.ViewSet):
             Response -- JSON serialized instance
         """
 
-        # hunter = Hunter.objects.get(pk=request.data["hunter"])
-        # wanted = Wanted.objects.get(pk=request.data["wanted"])
-
         mission = Mission()
         mission.hunter_id = request.data["hunter"]
         mission.title = request.data["title"]
         mission.description = request.data["description"]
         mission.wanted_id = request.data["wanted"]
         mission.type = request.data["type"]
-
-        # mission = Mission()
-        # mission.hunter_id = hunter
-        # mission.title = request.data["title"]
-        # mission.description = request.data["description"]
-        # mission.wanted_id = wanted
-        # mission.type = request.data["type"]
 
         try:
             mission.save()
@@ -49,6 +39,15 @@ class MissionViewSet(viewsets.ViewSet):
             return Response(serializer.data)
         except Exception as ex:
             return Response({"reason": ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
+
+    def list(self, request):
+        """Handle GET request for all missions
+        Returns:
+            Response -- JSON serialized list of missions
+        """
+        missions = Mission.objects.all()
+        serializer = MissionSerializer(missions, many=True)
+        return Response(serializer.data)
 
     def update(self, request, pk=None):
         """Handle PUT requests
