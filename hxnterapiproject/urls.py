@@ -7,6 +7,7 @@ from hxnterapiapi.views import *
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users, "user")
 router.register(r"missions", MissionViewSet, "mission")
+router.register(r"types", TypeViewSet, "type")
 
 urlpatterns = [
     path("", include(router.urls)),
