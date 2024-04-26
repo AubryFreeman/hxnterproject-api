@@ -1,0 +1,30 @@
+[
+    {
+      "model": "hxnterapiapi.type",
+      "pk": 1,
+      "fields": {
+        "name": "capture"
+      }
+    },
+    {
+      "model": "hxnterapiapi.type",
+      "pk": 2,
+      "fields": {
+        "name": "surveillance"
+      }
+    },
+    {
+      "model": "hxnterapiapi.type",
+      "pk": 3,
+      "fields": {
+        "name": "investigation"
+      }
+    },
+    {
+        "model": "hxnterapiapi.type",
+        "pk": 4,
+        "fields": {
+          "name": "interogation"
+        }
+      }
+  ]

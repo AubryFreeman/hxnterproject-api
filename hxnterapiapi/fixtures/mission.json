@@ -1,24 +1,24 @@
 [
-    {
-      "model": "hxnterapiapi.mission",
-      "pk": 1,
-      "fields": {
-        "hunter": 1,
-        "title": "Track the Elusive Hacker",
-        "description": "Gather intelligence and monitor the activities of a notorious hacker.",
-        "wanted": 1,
-        "type": "surveillance"
-      }
-    },
-    {
-      "model": "hxnterapiapi.mission",
-      "pk": 2,
-      "fields": {
-        "hunter": 2,
-        "title": "Apprehend the Jewel Thief",
-        "description": "Capture a skilled jewel thief known for daring heists.",
-        "wanted": 2,
-        "type": "capture"
-      }
+  {
+    "model": "hxnterapiapi.mission",
+    "pk": 1,
+    "fields": {
+      "hunter": 1,
+      "title": "Track the Elusive Hacker",
+      "description": "Gather intelligence and monitor the activities of a notorious hacker.",
+      "wanted": 1,
+      "type": 2
     }
-  ]
+  },
+  {
+    "model": "hxnterapiapi.mission",
+    "pk": 2,
+    "fields": {
+      "hunter": 2,
+      "title": "Apprehend the Jewel Thief",
+      "description": "Capture a skilled jewel thief known for daring heists.",
+      "wanted": 2,
+      "type": 1
+    }
+  }
+]

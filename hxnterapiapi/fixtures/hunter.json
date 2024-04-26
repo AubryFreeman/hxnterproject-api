@@ -1,25 +1,69 @@
 [
-    {
-      "model": "hxnterapiapi.hunter",
-      "pk": 1,
-      "fields": {
-        "user": 1,
-        "profile_pic": "https://example.com/hunter1.jpg",
-        "age": 32,
-        "bio": "Experienced bounty hunter with a keen eye for detail.",
-        "specialization": "Surveillance"
-      }
-    },
-    {
-      "model": "hxnterapiapi.hunter",
-      "pk": 2,
-      "fields": {
-        "user": 2,
-        "profile_pic": "https://example.com/hunter2.jpg",
-        "age": 28,
-        "bio": "Expert in high-risk capture operations.",
-        "specialization": "Capture"
-      }
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "profile_pic": "https://example.com/hunter1.jpg",
+      "age": 32,
+      "bio": "Experienced bounty hunter with a keen eye for detail.",
+      "specialization": "Surveillance"
     }
-  ]
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "profile_pic": "https://example.com/hunter2.jpg",
+      "age": 28,
+      "bio": "Expert in high-risk capture operations.",
+      "specialization": "Capture"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "profile_pic": "https://example.com/hunter3.jpg",
+      "age": 35,
+      "bio": "Seasoned bounty hunter with a strong moral compass.",
+      "specialization": "Investigations"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "profile_pic": "https://example.com/hunter4.jpg",
+      "age": 29,
+      "bio": "Specialized in tracking and apprehending fugitives.",
+      "specialization": "Tracking"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "profile_pic": "https://example.com/hunter5.jpg",
+      "age": 31,
+      "bio": "Skilled in undercover operations and gathering intel.",
+      "specialization": "Undercover"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 27,
+      "bio": "Excels in high-stakes pursuit and apprehension missions.",
+      "specialization": "Pursuit"
+    }
+  }
+]
   
