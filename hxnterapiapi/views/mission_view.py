@@ -89,6 +89,32 @@ class MissionViewSet(viewsets.ViewSet):
             )
 
 
+class WantedSerializer(serializers.ModelSerializer):
+    """JSON serializer for wanted persons"""
+
+    full_name = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Wanted
+        fields = ("id", "full_name", "first_name", "last_name")
+
+    def get_full_name(self, obj):
+        return f"{obj.first_name} {obj.last_name}"
+
+
+class WantedViewSet(ViewSet):
+    """ViewSet for Wanted Persons"""
+
+    def list(self, request):
+        """Handle GET requests for all wanted persons
+        Returns:
+            Response -- JSON serialized list of wanted persons
+        """
+        wanted_persons = Wanted.objects.all()
+        serializer = WantedSerializer(wanted_persons, many=True)
+        return Response(serializer.data)
+
+
 class TypeSerializer(serializers.ModelSerializer):
     """JSON serializer for missions"""
 
@@ -118,6 +144,8 @@ class MissionSerializer(serializers.ModelSerializer):
     type = TypeSerializer()
     hunter = HunterSerializer()
     hunter_name = serializers.SerializerMethodField()
+    wanted = serializers.SerializerMethodField()
+    # wanted_name = serializers.SerializerMethodField()
 
     class Meta:
         model = Mission
@@ -127,7 +155,7 @@ class MissionSerializer(serializers.ModelSerializer):
             "hunter",
             "title",
             "description",
-            "wanted_id",
+            "wanted",
             "type",
             "token",
         )
@@ -139,3 +167,12 @@ class MissionSerializer(serializers.ModelSerializer):
     def get_hunter_name(self, obj):
         user = User.objects.get(pk=obj.hunter.user_id)
         return f"{user.first_name} {user.last_name}"
+
+    # def get_wanted_name(self, obj):
+    #     wanted = Wanted.objects.get(pk=obj.wanted_id)
+    #     output = WantedSerializer(wanted, many=False).data["full_name"]
+    #     return output
+
+    def get_wanted(self, obj):
+        wanted = Wanted.objects.get(pk=obj.wanted_id)
+        return WantedSerializer(wanted, many=False).data
