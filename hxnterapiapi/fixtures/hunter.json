@@ -5,9 +5,9 @@
     "fields": {
       "user": 1,
       "profile_pic": "https://example.com/hunter1.jpg",
-      "age": 32,
-      "bio": "Experienced bounty hunter with a keen eye for detail.",
-      "specialization": "Surveillance"
+      "age": 26,
+      "bio": "Introducing Gavin, the Branch Pusher extraordinaire. With a keen eye for neglected branches and a knack for bringing code to its rightful place, Gavin specializes in tracking down Wanted individuals who neglect to push their branches. Armed with a deep understanding of version control and a passion for tidy repositories, Gavin leaves no branch unchecked in his quest for digital order. Whether it's hunting down culprits who forget to push or untangling the web of uncommitted changes, Gavin's expertise shines through in every repository he inspects. So, if you're guilty of letting your branches gather dust, beware, because when Gavin's on the hunt, there's no hiding from his vigilant gaze.",
+      "specialization": "People who don't push their branches"
     }
   },
   {
@@ -16,9 +16,9 @@
     "fields": {
       "user": 2,
       "profile_pic": "https://example.com/hunter2.jpg",
-      "age": 28,
-      "bio": "Expert in high-risk capture operations.",
-      "specialization": "Capture"
+      "age": 37,
+      "bio": "Meet Heidel, the Screen Share Sleuth. With a hawk-eyed focus on tracking down Wanted individuals notorious for their abysmal screen sharing etiquette, Heidel is a master of unraveling digital chaos. Armed with a keen eye for detail and a deep understanding of visual clarity, Heidel leaves no pixel unturned in his pursuit of justice. Whether it's hunting down culprits who forget to mute notifications or unraveling the mysteries of cluttered desktops, Heidel's expertise shines through in every virtual encounter. If you're on Heidel's radar, be prepared, because when it comes to bad screen shares, there's no hiding from his sharp gaze.",
+      "specialization": "People who do bad screen shares"
     }
   },
   {
@@ -27,9 +27,9 @@
     "fields": {
       "user": 3,
       "profile_pic": "https://example.com/hunter3.jpg",
-      "age": 35,
-      "bio": "Seasoned bounty hunter with a strong moral compass.",
-      "specialization": "Investigations"
+      "age": 25,
+      "bio": "Introducing Rachel, the Import Eradicator. With a razor-sharp eye for detail and an unwavering commitment to pristine codebases, Rachel specializes in tracking down Wanted individuals who neglect to remove their unused imports before presenting their pull requests. Armed with a meticulous approach and a knack for detecting even the most inconspicuous coding clutter, Rachel leaves no stone unturned in her mission for code cleanliness. Whether it's hunting down lingering imports or restoring order to tangled codebases, Rachel's expertise shines brightly in every code review. So, if you're guilty of leaving behind a trail of unnecessary imports, brace yourself, because Rachel's relentless pursuit of perfection leaves no room for sloppy coding practices.",
+      "specialization": "People who don't delete their unused imports before submitting PR's"
     }
   },
   {
@@ -38,9 +38,9 @@
     "fields": {
       "user": 4,
       "profile_pic": "https://example.com/hunter4.jpg",
-      "age": 29,
-      "bio": "Specialized in tracking and apprehending fugitives.",
-      "specialization": "Tracking"
+      "age": 32,
+      "bio": "Meet Claire, the Code Formatting Crusader. With a sharp eye for readability and a passion for clean code, Claire specializes in tracking down Wanted individuals who neglect to format their code. Armed with a meticulous attention to detail and a deep understanding of coding standards, Claire leaves no unformatted line untouched in her quest for codebase cleanliness. Whether it's hunting down culprits who ignore indentation or unraveling the mess of inconsistent spacing, Claire's expertise shines through in every code review. So, if you're guilty of leaving your code in disarray, beware, because when Claire's on the case, there's no escaping her scrutiny for code elegance.",
+      "specialization": "People who don't format their code"
     }
   },
   {
@@ -50,8 +50,8 @@
       "user": 5,
       "profile_pic": "https://example.com/hunter5.jpg",
       "age": 31,
-      "bio": "Skilled in undercover operations and gathering intel.",
-      "specialization": "Undercover"
+      "bio": "Meet Will, the Fetch Fixer. With a finely tuned radar for detecting subpar fetch calls, Will is a master at tracking down Wanted individuals who fumble with their API requests. Equipped with a deep understanding of HTTP protocols and a knack for deciphering error responses, Will leaves no endpoint unexplored in his pursuit of digital justice. Whether it's chasing down culprits who forget to handle promise rejections or unraveling the mysteries of malformed request payloads, Will's expertise shines through in every network traversal. If you're on Will's radar, prepare yourself, because when it comes to bad fetch calls, there's no escaping his vigilant gaze.",
+      "specialization": "People who make bad fetch calls"
     }
   },
   {
@@ -60,9 +60,97 @@
     "fields": {
       "user": 6,
       "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 20,
+      "bio": "Introducing Hewson, the Efficiency Enforcer. With an unwavering commitment to optimization and a keen eye for inefficiencies, Hewson specializes in tracking down Wanted individuals who neglect to optimize their code and processes. Armed with a deep understanding of performance metrics and a knack for identifying bottlenecks, Hewson leaves no algorithm unanalyzed in his pursuit of peak efficiency. Whether it's hunting down culprits who waste resources or unraveling the complexities of unoptimized workflows, Hewson's expertise shines through in every optimization endeavor. If you're on Hewson's radar, be prepared, because when it comes to inefficiency, there's no escaping his relentless pursuit of optimization perfection.",
+      "specialization": "People who aren't optimized"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 22,
+      "bio": "Meet Emily, the CSS Crusader. With a sharp eye for design and a passion for pixel perfection, Emily specializes in tracking down Wanted individuals who wreak havoc with their CSS practices. Equipped with a comprehensive knowledge of web styling and a knack for spotting spaghetti code, Emily leaves no selector unscanned in her quest for style supremacy. Whether it's hunting down culprits who misuse floats or unraveling the mysteries of !important declarations, Emily's expertise shines through in every stylesheet she inspects. If you're on Emily's radar, prepare for a makeover, because when it comes to bad CSS practices, there's no escaping her discerning eye for design.",
+      "specialization": "People with bad CSS practices"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 33,
+      "bio": "Introducing Kim, the Help-Seeking Heroine. With a compassionate heart and a keen sense of empathy, Kim specializes in tracking down individuals who shy away from asking for assistance. Armed with patience and understanding, Kim leaves no stone unturned in her quest to provide support and guidance to those in need. Whether it's offering a helping hand to overcome obstacles or lending an ear to listen, Kim's expertise shines through in her unwavering commitment to fostering a culture of collaboration. So, if you find yourself struggling alone, fear not, because when Kim's on the case, help is never far away.",
+      "specialization": "People who don't ask for help"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 9,
+    "fields": {
+      "user": 9,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 29,
+      "bio": "Meet Brendon, the vigilant guardian of Django best practices. With a deep understanding of Django's intricacies and a passion for excellence, Brendon specializes in tracking down individuals who deviate from established Django conventions. Armed with a wealth of experience and a sharp eye for code quality, Brendon leaves no model unvalidated or view unoptimized in his quest for Django perfection. Whether it's refactoring outdated code or optimizing database queries, Brendon's expertise shines through in every Django project he touches. So, if you're guilty of Django faux pas, beware, because when Brendon's on the case, Django's integrity is non-negotiable.",
+      "specialization": "People with bad Django practices"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 10,
+    "fields": {
+      "user": 10,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 26,
+      "bio": "Introducing Jean, the meticulous curator of pull requests. With a discerning eye for detail and a dedication to code quality, Jean specializes in identifying and remedying flaws in pull requests. Armed with a comprehensive understanding of code review best practices, Jean leaves no line of code uninspected in her quest for PR perfection. Whether it's addressing syntax errors, improving documentation, or ensuring adherence to coding standards, Jean's expertise shines through in every PR she reviews. So, if you're guilty of submitting subpar pull requests, beware, because when Jean's on the case, excellence is the only acceptable outcome.",
+      "specialization": "People who write bad PR's"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 11,
+    "fields": {
+      "user": 11,
+      "profile_pic": "https://example.com/hunter6.jpg",
       "age": 27,
-      "bio": "Excels in high-stakes pursuit and apprehension missions.",
-      "specialization": "Pursuit"
+      "bio": "Meet Eric, the CSS Connoisseur. With an eye for design and a passion for pixel perfection, Eric specializes in tracking down individuals with subpar CSS practices. Armed with a deep understanding of CSS standards and a flair for aesthetic excellence, Eric leaves no stylesheet unturned in his quest for frontend finesse. Whether it's addressing messy selectors, optimizing layout performance, or enhancing accessibility, Eric's expertise shines through in every website he polishes. So, if you're guilty of CSS crimes, beware, because when Eric's on the case, your web presence will shine brighter than ever before.",
+      "specialization": "People with bad CSS practices"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 12,
+    "fields": {
+      "user": 12,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 34,
+      "bio": "Meet Dale, the vigilant overseer of commits. With a meticulous approach and a commitment to codebase integrity, Dale specializes in identifying and rectifying deficiencies in commits. Armed with a sharp eye for code quality and a dedication to version control best practices, Dale leaves no commit uninspected in his quest for commit excellence. Whether it's addressing code duplication, resolving merge conflicts, or ensuring descriptive commit messages, Dale's expertise shines through in every repository he audits. So, if you're guilty of sloppy commits, beware, because when Dale's on the case, the commit history will reflect nothing but the highest standards of quality and professionalism.",
+      "specialization": "People with bad commits"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 13,
+    "fields": {
+      "user": 13,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 27,
+      "bio": "Meet Val, the Doc Dodger Detector. With a laser focus on hunting down Wanted individuals notorious for their aversion to reading documentation, Val is a force to be reckoned with. Armed with an encyclopedic knowledge of codebases and an uncanny ability to sniff out those who bypass the fine print, Val leaves no stone unturned in her pursuit of justice. Whether it's chasing down elusive code breakers or unraveling the tangled webs of undocumented features, Val's tenacity knows no bounds. If you're on Val's list, consider yourself warned, because when it comes to skipping the docs, there's no escape from her eagle-eyed scrutiny.",
+      "specialization": "People who don't read the docs"
+    }
+  },
+  {
+    "model": "hxnterapiapi.hunter",
+    "pk": 14,
+    "fields": {
+      "user": 14,
+      "profile_pic": "https://example.com/hunter6.jpg",
+      "age": 42,
+      "bio": "Meet Steve, the Maverick Tracker. With a keen eye for detail and a knack for unraveling the most intricate puzzles, Steve specializes in tracking down Wanted individuals who seem to slip through the cracks. His secret weapon? A combination of street smarts, advanced surveillance techniques, and a sixth sense for predicting the unpredictable. Whether it's deciphering cryptic clues or navigating the murky underworld of fugitives, Steve is always one step ahead. With a reputation for getting the job done when others falter, he's the go-to guy when the hunt gets tough. So, if you're on the run, beware Steve's relentless pursuit – because when he's on your trail, there's nowhere to hide.",
+      "specialization": "AI Engineering"
     }
   }
 ]
