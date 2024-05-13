@@ -11,4 +11,3 @@ python3 manage.py loaddata hunter
 # python3 manage.py loaddata mission
 python3 manage.py loaddata wanted
 python3 manage.py loaddata type
-

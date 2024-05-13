@@ -1,24 +1,101 @@
 [
-    {
-      "model": "hxnterapiapi.wanted",
-      "pk": 1,
-      "fields": {
-        "first_name": "John",
-        "last_name": "Doe",
-        "age": 35,
-        "description": "Skilled hacker responsible for multiple cyber attacks.",
-        "wanted_for": "Cyber crimes"
-      }
-    },
-    {
-      "model": "hxnterapiapi.wanted",
-      "pk": 2,
-      "fields": {
-        "first_name": "Jane",
-        "last_name": "Smith",
-        "age": 42,
-        "description": "Notorious jewel thief with a string of successful heists.",
-        "wanted_for": "Theft"
-      }
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 1,
+    "fields": {
+      "first_name": "Stacy",
+      "last_name": "Griffy",
+      "age": 35,
+      "description": "Meet Stacy, the bold trailblazer in the world of version control! Known for her adventurous spirit, Stacy prefers to march to the beat of her own merge, occasionally daring to work directly in Main instead of branching. While her approach may seem unconventional, it's driven by a desire to streamline processes and simplify workflows. Beware her bold moves and enthusiastic commits, for Stacy's coding journey is one of innovation and creativity. Approach with curiosity and a friendly reminder: in the world of Git, branching out can lead to exciting discoveries and smoother collaboration!",
+      "wanted_for": "Working in Main Branch instead of a Feature Branch"
     }
-  ]
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 2,
+    "fields": {
+      "first_name": "Andy",
+      "last_name": "Knepshield",
+      "age": 42,
+      "description": "Meet Andy, the master of his own time zone! Sought for the minor infraction of occasionally logging on just a tad fashionably late, Andy brings a dash of spontaneity to virtual gatherings. While his sense of timing may sometimes veer off the beaten path, it's all part of his unique charm. Beware his casual entrances and friendly banter, for when Andy joins the scene, the atmosphere lightens up with his infectious energy. Approach with a smile and a gentle reminder that in the world of schedules, flexibility is the spice of life!",
+      "wanted_for": "Logging on late"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 3,
+    "fields": {
+      "first_name": "Jordan",
+      "last_name": "VanVeldhuisen",
+      "age": 28,
+      "description": "Jordan, the intrepid explorer of the unknown, sought for his spirited attempts at unraveling mysteries through daring guesses. With a flair for the dramatic that adds excitement to every venture, Jordan's known for his bold conjectures in the face of uncertainty. Beware his adventurous spirit and playful banter, for when Jordan's on the scene, the journey becomes as thrilling as the destination. Approach with curiosity and a gentle reminder that sometimes, the joy lies in exploring the unknown rather than sticking to the beaten path!",
+      "wanted_for": "Trying to guess what something is instead of saying he doesn't know"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 4,
+    "fields": {
+      "first_name": "Angela",
+      "last_name": "Barber",
+      "age": 31,
+      "description": "Meet Angela, the enigmatic explorer of version control, sought for her curious habit of lingering in the digital shadows. With a penchant for contemplation that occasionally delays her commits, Angela's known for her careful consideration before pushing to GitHub. Beware her thoughtful presence and the quiet anticipation of her pending changes, for when Angela's on the project, the repository becomes a haven of thoughtful craftsmanship. Approach with understanding and a gentle reminder that in the world of Git, collaboration flourishes when code is shared and contributions are celebrated!",
+      "wanted_for": "Not pushing to Github"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 5,
+    "fields": {
+      "first_name": "Saygin",
+      "last_name": "Gecener",
+      "age": 28,
+      "description": "Saygin, celebrated for his pioneering spirit in the digital domain, is sought for his tendency to blaze new trails by directly contributing to the main branch. With a fearless approach to innovation, Saygin's actions may sometimes diverge from conventional workflows, yet his intentions are rooted in a passion for progress and efficiency. While his methods may raise eyebrows, Saygin's drive to push boundaries can inspire new perspectives and breakthroughs. Approach with openness and a friendly reminder that collaboration thrives when we navigate changes together.",
+      "wanted_for": "Purposely pushing to Main"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 6,
+    "fields": {
+      "first_name": "Luke",
+      "last_name": "Williams",
+      "age": 36,
+      "description": "Luke, hailed for his relentless pursuit of solutions, is sought for dedicating extensive time to solving problems. While his commitment to excellence is commendable, his propensity to linger on challenges may delay progress and hinder team momentum. Beware his tenacious focus and unwavering determination – for when Luke sets his sights on a problem, time seems to stand still in his quest for resolution. Approach with appreciation for his dedication and a gentle reminder that collaboration thrives when we strike a balance between perseverance and efficiency.",
+      "wanted_for": "Spending to much time on a problem"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 7,
+    "fields": {
+      "first_name": "Tiana",
+      "last_name": "Robinson",
+      "age": 27,
+      "description": "Meet Tiana, the mysterious maven of version control, sought for her thoughtful approach to completing tasks. With a talent for pondering before committing, Tiana's known for her careful consideration of each code change. Beware her deliberate nature and the anticipation of her pending commits – for when Tiana's on the job, the repository becomes a canvas of meticulous craftsmanship. Approach with understanding and a gentle reminder that in the world of version control, each commit tells a story of progress and collaboration!",
+      "wanted_for": "Not committing after finishing a task leading to a massive PR and Commit"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 8,
+    "fields": {
+      "first_name": "Greg",
+      "last_name": "Korte",
+      "age": 45,
+      "description": "Greg, the renegade of teamwork, strikes fear into the hearts of group projects everywhere. He's the elusive figure who sneaks off into the shadows, emerging only when the work is done and the credit is his alone. Beware his solitary ways, for Greg is known to merge without warning, leaving his collaborators in a state of shock and awe. Approach with caution and a friendly reminder of the power of teamwork!",
+      "wanted_for": "Finishing a project on his own and merging"
+    }
+  },
+  {
+    "model": "hxnterapiapi.wanted",
+    "pk": 9,
+    "fields": {
+      "first_name": "Aubry",
+      "last_name": "Freeman",
+      "age": 24,
+      "description": "Aubry stands accused of incessantly pestering classmates with his perplexing ponderings: Wanted or Bounty Hunter? His mercurial nature sees him flip-flop between ideas, only to return to the original notion, causing confusion and exasperation among his peers. Furthermore, Aubry's reluctance to seek assistance when confronted with challenges exacerbates the frustration. Approach with patience and understanding, for behind Aubry's antics lies a desire for adventure, albeit wrapped in a bewildering cloak of indecision.",
+      "wanted_for": "Annoying his classmates by asking them if they would rather be Wanted or be a Bounty Hunter and then switch up the idea all to go back to the original idea… also not asking for help when stuck on a problem"
+    }
+  }
+]
